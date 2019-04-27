@@ -5,7 +5,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = '127.0.0.1'
 port = 50000
 
-socke.bind((host, port))
+sock.bind((host, port))
 sock.listen(1)
 
 print('Waiting connection ...')
@@ -22,7 +22,7 @@ while True:
     if data == b'exit':
         break
 
-    print('Recieved a message' + srt(data))
+    print('Recieved a message' + str(data))
 
     # クライアントにデータを送信
     connection.send(data)
